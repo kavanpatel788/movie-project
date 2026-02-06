@@ -1,0 +1,9 @@
+body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f4f4f4; }
+header { text-align: center; background-color: #333; color: white; padding: 10px; }
+main { max-width: 800px; margin: 0 auto; }
+section { margin-bottom: 20px; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+select, input, button { padding: 10px; margin: 5px; }
+#seats { display: grid; grid-template-columns: repeat(10, 1fr); gap: 5px; }
+.seat { width: 30px; height: 30px; background: green; cursor: pointer; border-radius: 5px; }
+.seat.selected { background: red; }
+.seat.occupied { background: gray; cursor: not-allowed; }
