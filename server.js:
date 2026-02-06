@@ -1,0 +1,18 @@
+const express = require('express');
+const app = express();
+app.use(express.json());
+app.use(express.static('.')); // Serve static files
+
+let bookings = []; // In-memory storage (use a DB like MongoDB for real apps)
+
+app.post('/book', (req, res) => {
+    const booking = req.body;
+    bookings.push(booking);
+    res.json({ message: 'Booking saved!', id: bookings.length });
+});
+
+app.get('/bookings', (req, res) => {
+    res.json(bookings);
+});
+
+app.listen(3000, () => console.log('Server running on http://localhost:3000'));
